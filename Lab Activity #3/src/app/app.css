@@ -1,0 +1,46 @@
+/* Navbar styling */
+.navbar {
+  width: 100%;
+  background: linear-gradient(to right, #4caf50, #81c784);
+  padding: 10px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container to align links */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Navigation links */
+.nav-link {
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative; /* required for underline */
+}
+
+/* Hover effect */
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
+/* Active link styling - underline */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* space below text */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
